@@ -52,10 +52,27 @@ body {
 h1 {
     font-size: 2rem;
     text-align: center;
+    background-color: gold;
 }
 
-.wrapper {
-margin: auto ;
+.accordion{
+    background-color: gainsboro;
+    color: blue;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.accordion_separation{
+    display: contents;
+}
+
+.accordion_line{
+    width: 100%;
+    border: 0.05rem solid black;
+}
+
+.accordion_wrapper {
+    margin: 2em auto ;
+    width: 50%;
 }
 
 .accordion_image{
@@ -69,8 +86,14 @@ margin: auto ;
   }
 
 .accordion_item img{
-    width: 60%;
+    width: 90%;
     max-height: 0;
+}
+
+.accordion_title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .accordion_item{
@@ -79,12 +102,35 @@ margin: auto ;
     align-items: center;
 }
 
+.accordion_input{
+    display: none;
+}
 
-.accordion_item input:checked ~ img{
+.accordion_item input:checked ~ label img{
   max-height: 100vh;
   transition: max-height 2s ease-out;
+  margin: 2vh;
+}
+
+.accordion_item input:checked ~ label>.accordion_title{
+    color: black;
+}
+
+.accordion_item input:checked ~ label>.accordion_title .btn_cross{
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+.accordion_item input:active ~ label img{
+    color: black;
 }
 
 .accordion_item label{
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    cursor: url('./assets/svg/icons8-3d-pointer.svg'), pointer;
 }
+

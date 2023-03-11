@@ -8,22 +8,37 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <div class="wrapper">
+    <div class="accordion_wrapper">
         <h1> CSS Bayan</h1>
             <ul class="accordion">
                 <li class="accordion_item">
-                    <input type="checkbox" class="accordion_input" name="accordion" id="toggle-1" checked >
-                    <label class="accordion_label" for="toggle-1">Судимы?!</label>
+                    <input type="radio" class="accordion_input" name="accordion" id="toggle-1" checked>
+                    <label class="accordion_label" for="toggle-1">
+                        <div class="accordion_title">
+                        <div class="accordion_subtitle">В столице</div>
+                        <div class="btn_cross">&#10010</div>
+                    </div>
                     <!-- <div class="accordion_image"> -->
                         <img src="./assets/image/meme-1.webp" alt="meme">
                     <!-- </div> -->
+                    <div class="accordion_separation">
+                            <span class="accordion_line"></span>
+                    </label>
                 </li>
                 <li class="accordion_item">
-                    <input type="checkbox" class="accordion_input" name="accordion" id="toggle-2">
-                    <label class="accordion_label" for="toggle-2">Судимы?!</label>
+                    <input type="radio" class="accordion_input" name="accordion" id="toggle-2">
+                    <label class="accordion_label" for="toggle-2">
+                        <div class="accordion_title">
+                        <div class="accordion_subtitle">meme-2</div>
+                        <div class="btn_cross">&#10010</div>
+                    </div>
                     <!-- <div class="accordion_image"> -->
                         <img src="./assets/image/meme-1.webp" alt="meme">
                     <!-- </div> -->
+                    <div class="accordion_separation">
+                            <span class="accordion_line"></span>
+                    </label>
+                    
                 </li>
             
             </ul>

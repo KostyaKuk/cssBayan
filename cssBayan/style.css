@@ -72,7 +72,7 @@ h1 {
 
 .accordion_wrapper {
     margin: 2em auto ;
-    width: 50%;
+    width: 70%;
 }
 
 .accordion_image{
@@ -88,6 +88,7 @@ h1 {
 .accordion_item img{
     width: 90%;
     max-height: 0;
+    transition: 1s;
 }
 
 .accordion_title{
@@ -95,6 +96,8 @@ h1 {
     width: 100%;
     justify-content: space-between;
     font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 0.5rem;
 }
 
 .accordion_item{
@@ -117,6 +120,10 @@ h1 {
     color: black;
 }
 
+.btn_cross{
+    opacity: 0;
+}
+
 .accordion_item input:checked ~ label>.accordion_title .btn_cross{
     transform: rotate(45deg);
     transition: 0.3s;
@@ -136,6 +143,80 @@ h1 {
 }
 
 @media(hover:hover){
-    
+
+    .accordion_wrapper:hover .accordion_item .accordion_label .accordion_title .btn_cross{
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    .accordion_wrapper:hover .accordion{
+        color: black;
+        transition: 1s;
+    }
+
+    .accordion_item input:hover ~ label>.accordion_title .btn_cross{
+        transform: rotate(45deg);
+        color: black;
+    }
+
+    .accordion_item input:hover ~ label img {
+        max-height: 100vh;
+        transition: max-height 2s ease-out;
+        margin: 2vh;
+    }
+
 }
+
+@media (min-width:319px) and (max-width: 568px) {
+    .accordion_title{
+        font-size: 1.5rem;
+    }
+
+    .accordion_item img{
+        width: 70%;
+    }
+
+    .accordion_wrapper{
+        width: 60%;
+    }
+}
+
+@media (min-width: 569px) and (max-width:1180px){
+    .accordion_title{
+        font-size: 1.8rem;
+    }
+
+    .accordion_item img{
+        width: 80%;
+    }
+    .accordion_wrapper{
+        width: 50%;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media screen and (min-width:1180px){
+    .accordion_title{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .accordion_item img{
+        width: 85%;
+    }
+
+    .accordion_wrapper{
+        width: 40%;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+
 

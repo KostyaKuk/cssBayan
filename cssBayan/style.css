@@ -32,11 +32,6 @@ list-style: none;
 blockquote, q {
 quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-content: '';
-content: none;
-}
 table {
 border-collapse: collapse;
 border-spacing: 0;
@@ -141,6 +136,18 @@ h1 {
     width: 100%;
     cursor: url('./assets/svg/icons8-3d-pointer.svg'), pointer;
 }
+
+.accordion_item:active .accordion_label .accordion_title  .accordion_subtitle {
+    color: red;
+  }
+
+  .accordion_item:active .accordion_label .accordion_title  .accordion_subtitle ~.btn_cross{
+    color: red;
+  }
+
+  .accordion_item:active img{
+    opacity: 0.5;
+  }
 
 @media(hover:hover){
 
